@@ -1,0 +1,140 @@
+/**/
+
+.dropdown-item:hover{
+    background-image:url(Hinh/nen/background-mau-hong-phan_035901510.jpg);
+    background-color:#eee;
+}
+
+/* ========================== custom navbar ============================== */
+
+.bg-light{
+    transition: 400ms ease-out;
+    background: transparent !important;
+    
+	padding: 30px 10% 30px 10% !important;
+}
+
+/* #20272F */
+/* Dùng dấu .  */
+.bg-dark.scrolled{
+    background:  #eb2f8d !important;
+	padding: 0px 2% 0px 2% !important;
+}
+.header-nav-link{
+    color: whitesmoke !important;
+} 
+
+/* ==========================custom navbar============================== */
+
+
+
+
+body, html {
+    height: 100%;
+}
+
+
+/* reservation */
+.panel {
+    text-align: center;
+    font-size: xx-large;
+    color: #eeeeee;
+    background-color: #389e0d;
+    width: 100%;
+    height: 100px;
+    padding: 25px;
+    animation-name: panel-anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.panel-text {
+    text-transform: uppercase;
+}
+
+@keyframes panel-anim {
+    0%   {background-color: #f5222d;}
+    25%  {background-color: #fa8c16;}
+    50%  {background-color: #7cb305;}
+    100% {background-color: #08979c;}
+  }
+
+/*================= menu =======================*/
+.image-cap {
+    min-height: 180px;
+    margin-top: 0.25rem;
+}
+
+.caption .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.caption:hover .overlay {
+    opacity: 1;
+}
+
+.image-cap-txt {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+/*==============================================*/
+
+div.wallpage {
+    height:100%;
+    position: relative;
+}
+
+/* make parallaxing cover image */
+div.wallpage:before {
+    /* The image used */
+    background-image: url("Hinh/nen/anh-background-mau-hong-dep_035900682.jpg");
+  
+    /* Set a specific height */
+    min-height: 600px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    content:'';
+    position:absolute;
+    filter:brightness(0.8); 
+    -webkit-filter:brightness(0.4);    
+    left:0;top:0;bottom:0;right:0; 
+    z-index:-1;
+}
+
+
+.center {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: white;
+} 
+
+
+
