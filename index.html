@@ -128,7 +128,32 @@ div.desc {
   background: rgb(31, 31, 29) ;
   margin-top: 20px;
 }
+.panel {
+    text-align: center;
+    font-size: xx-large;
+    color: #eeeeee;
+    background-color: #389e0d;
+    width: 100%;
+    height: 100px;
+    padding: 25px;
+    animation-name: panel-anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
 
+.panel-text {
+    text-transform: uppercase;
+}
+
+@keyframes panel-anim {
+    0%   {background-color: #f02a97;}
+    25%  {background-color: #d5f03d;}
+    50%  {background-color: #64f751;}
+    100% {background-color: #6dedf1;}
+  }
+  
+    
+    
 
     </style>
     
@@ -142,10 +167,15 @@ div.desc {
       </div>
       
       <div class="topnav">
-        <a href="#">Trang chủ</a>
+        <a href="clothes.html">Trang chủ</a>
         <a href="#">Giới thiệu</a>
         <a href="#">Đặt hàng</a>
-        <a href="#" style="float:right">Tìm kiếm</a>
+        <a href="#" style="float:right"><form>
+          <input type="text" name="search" placeholder="Tìm kiếm">
+  </form></a>
+
+        </div>
+        
       </div>
       <div class="content">
     
@@ -154,10 +184,10 @@ div.desc {
             <h5>Thành lập năm 1946 bởi nhà thiết kế cùng tên Christian Dior,là công ty hàng hóa xa xỉ nổi tiếng của Pháp. Ngày nay công ty cho mắt các thiết kế và chuỗi bán lẻ trang phục may sẵn đẳng cấp và sang trọng.</h5>
             
             
-            <div class="fakeimg" >Image</div>
+            <div class="fakeimg" ></div>
             <img src="Hinh/0.jpg" width="auto" height="auto">
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <p>Vài nét sơ lược về cửa hàng.....</p>
+            <p>Cửa hàng luôn cho ra nhiều sản phẩm mới, đa dạng về mẩu mã,phong cách...</p>
           </div>
           <div class="responsive">
             <div class="gallery">
@@ -203,8 +233,49 @@ div.desc {
             <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
           </div>
 
-
-          
+          <div class="container-fluid" id="reservation">
+            <div class="panel">
+              <p class="panel-text"> Nhanh Tay Đặt Hàng Nhận Ngay Ưu Đãi!</p>
+            </div>
+            <div class="col-md-12">
+              <div class="row justify-content-center text-center overlay shadow-lg py-3">
+                <div class="col-md-5">
+                  <h4 id="congthuc">Đặt Hàng Trực Tuyến</h4>
+                  <hr style="width: 250px; border-radius: 50%; border: 2px solid #cdf322;">
+                  <br>
+                  <h6>DIOR biểu tượng thời trang đẳng cấp và vẻ đẹp sang trọng. Luôn cam kết về chất lượng của sản phẩm và đồng hành cùng khách hàng!</h6>
+                  <form id="reservation-form" class="pt-4" action="./pages/reservation.html" onsubmit="submitform()">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Họ & Tên" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="address" class="form-control" id="address" name="address"  placeholder="Địa chỉ" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="phonenumber" minlength="11" maxlength="11" name="phonenumber" placeholder="Số điện thoại" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="date" name="date"  placeholder="26/11/2020" onfocus="(this.type='date')" onblur="(this.type='text')" required> 
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Nhập email của bạn" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="time" name="time" placeholder="06:00 CH" onfocus="(this.type='time')" onblur="(this.type='text')" required>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success btn-lg" display="block">Đặt Hàng</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      
 
           <div class="footer">
             <h2>Footer</h2>
