@@ -151,3 +151,14 @@ function addItemToCart(title, price, img) {
 	  updatecart()
 	})
 }  
+$('button#search-btn').click(function(){
+	var sText = $('input#search-text').val().toLowerCase();
+	
+	var x, i;
+	x = document.getElementsByClassName("food");
+	for (i = 0; i < x.length; i++) {
+		foodRemoveClass(x[i], "show");
+		if (x[i].innerHTML.toLowerCase().indexOf(sText) > -1) foodAddClass(x[i], "show");
+	}
+})
+
